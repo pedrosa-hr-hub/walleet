@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/pedrosa-hr-hub/walleet#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.2"
   }
 }
