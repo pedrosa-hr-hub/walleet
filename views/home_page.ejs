@@ -1,0 +1,34 @@
+<%- include ('partials/header.ejs');%>
+
+<%- include ('partials/header_navbar.ejs');%>
+
+<div class="container mt-5">
+     <div class="card">
+          <div class="card-header">
+               <h4>MOVIMENTAÇÃO NA CARTEIRA</h4>
+          </div>
+          <div class="card-body">
+               <label for="Identify_buy">Qual produto teve movimentação?</label>
+               <br>
+               <a href="/stock/mov"><button class="btn btn-outline-dark mt-2">AÇÃO</button></a>
+               <a href="/crypto/mov"><button class="btn btn-outline-dark mt-2">CRYPTO MOEDA</button></a>
+               <a href="/fii/mov"><button class="btn btn-outline-dark mt-2">FUNDO IMBOLIÁRIO</button></a>
+               <a href="/fund/mov"><button class="btn btn-outline-dark mt-2">FUNDO DE INVESTIMENTO</button></a>
+               <a href="emergency_reserve/mov"><button class="btn btn-outline-dark mt-2">RESERVA DE EMERGÊNCIA</button></a>
+          </div>
+     </div>
+
+     <div class="card mt-5">
+          <div class="card-header">
+               <h4>NOTÍCIAS DO MOMENTO</h4>
+          </div>
+          <div class="card-body">
+               <ul id="news-head" class="list-group list-group-flush"></ul>
+          </div>
+     </div>
+     
+</div>
+
+<%- include ('partials/footer_navbar.ejs');%>
+
+<%- include ('partials/footer.ejs');%>
