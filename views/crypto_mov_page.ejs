@@ -1,0 +1,52 @@
+<%- include ('partials/header.ejs');%>
+
+<%- include ('partials/header_navbar.ejs');%>
+
+<body>
+     <div class="container mt-5">
+
+          <div class="card">
+               <div class="card-header">
+                    <h1>Operação com CRYPTO MOEDA:</h1>
+               </div>
+               <div class="card-body">
+                    <form method="post" action="/stock/create">
+                         <div class="form-group mt-2">
+                              <label for="nameComppany">Nome da crypto moeda:</label>
+                              <input class="form-control" type="text" name="name-stock" placeholder="Exemplo: Bitcoin, Ethereum" required>
+                         </div>
+                         <div class="form-group mt-2">
+                              <label for="dateComppany">Data da operação:</label>
+                              <input class="form-control" type="date" name="date-stock" required>
+                         </div>
+                         <div class="form-group mt-2">
+                              <label for="operationDetails">Operação de:</label>
+                              <div class="form-check">
+                                   <input class="form-check-input" type="checkbox" value="buy" name="type_operation_buy">
+                                   <label class="form-check-label" for="defaultCheck1">
+                                     COMPRA
+                                   </label>
+                              </div>
+                              <div class="form-check">
+                                   <input class="form-check-input" type="checkbox" value="sale" name="type_operation_sale">
+                                   <label class="form-check-label" for="defaultCheck1">
+                                     VENDA
+                                   </label>
+                              </div>
+                         </div>
+                         <div class="form-group mt-2">
+                              <label for="quantyOperation">Quantidade:</label>
+                              <input class="form-control" type="number" name="quanty-operation" step="1" min="1" placeholder="Exemplo: 150" required>
+                         </div>
+                         <div class="form-group mt-2">
+                              <label for="valueOperation">Valor:</label>
+                              <input class="form-control" type="number" name="value-operation" step="0.01" min="0.01" placeholder="Exemplo: 1.000,55" required>
+                         </div>
+                              <button class="btn btn-success" type="submit">Salvar Operação</button>
+                    </form>
+               </div>
+          </div>
+     <div>
+</body>
+
+<%- include ('partials/footer.ejs');%>
