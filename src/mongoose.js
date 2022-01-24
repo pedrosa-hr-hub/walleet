@@ -1,11 +1,8 @@
 const mongoose = require('mongoose');
 require("dotenv").config();
 
-const db_host = process.env.DB_HOST;
-const db_name = process.env.DB_NAME;
-
 mongoose.Promise = global.Promise;
-mongoose.connect(`mongodb://${db_host}/${db_name}'`).then(
+mongoose.connect(process.env.DB_STRING).then(
           ()=>{
                console.log('DataBase ON!')
           }
