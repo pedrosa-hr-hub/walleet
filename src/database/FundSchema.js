@@ -1,12 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Stock = new Schema({
-     companyName:{
-          type: String,
-          required: true
-     },
-     companyTiker:{
+const Fund = new Schema({
+     fundName:{
           type: String,
           required: true
      },
@@ -14,19 +10,15 @@ const Stock = new Schema({
           type: Date,
           required: true,
      },
-     saleOperation:{
+     apllyOperation:{
           type: String,
           required: false,
           default: null,
      },
-     buyOperation:{
+     rescueOperation:{
           type: String,
           required: false,
           default: null
-     },
-     quanty:{
-          type: Number,
-          required: true,
      },
      value:{
           type: mongoose.Types.Decimal128,
@@ -34,4 +26,4 @@ const Stock = new Schema({
      }
 })
 
-module.exports = mongoose.model('Stock', Stock);
+module.exports = mongoose.model('Fund', Fund);

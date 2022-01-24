@@ -10,51 +10,51 @@
                     <h1>Operação com RESERVA DE EMERGÊNCIA:</h1>
                </div>
                <div class="card-body">
-                    <form method="get" action="">
+                    <form method="post" action="/emergency_reserve/new">
                          <div class="form-group mt-2">
                               <label for="reserveName">Nome do local:</label>
-                              <input class="form-control" type="text" name="name-Reserve" placeholder="Exemplo: NUconta, Tesouro IPCA 2045" required>
+                              <input class="form-control" type="text" name="nameReserve" placeholder="Exemplo: NUconta, Tesouro IPCA 2045" required>
+                         </div>
+                         <div class="form-group mt-2">
+                              <label for="dateReserve">Data da operação:</label>
+                              <input class="form-control" type="date" name="dateOperationReserve" required>
                          </div>
                          <div class="form-group mt-2">
                               <label for="operationDetails">O local é um(a):</label>
                               <div class="form-check">
-                                   <input class="form-check-input" type="checkbox" value="traditionalBank" name="type_operation_traditionalBank">
+                                   <input class="form-check-input" type="checkbox" value="traditionalBank" name="typeOperationTraditionalBank">
                                    <label class="form-check-label" for="checkBank">
                                      CONTA EM BANCO TRADICIONAL
                                    </label>
                               </div>
                               <div class="form-check">
-                                   <input class="form-check-input" type="checkbox" value="digitalBank" name="type_operation_digitalBank">
+                                   <input class="form-check-input" type="checkbox" value="digitalBank" name="typeOperationDigitalBank">
                                    <label class="form-check-label" for="checkDigitalBank">
                                      CONTA EM BANCO DIGITAL
                                    </label>
                               </div>
                               <div class="form-check">
-                                   <input class="form-check-input" type="checkbox" value="fund" name="type_operation_fund">
+                                   <input class="form-check-input" type="checkbox" value="fund" name="typeOperationFund">
                                    <label class="form-check-label" for="checkFund">
                                      FUNDO
                                    </label>
                               </div>
                               <div class="form-check">
-                                   <input class="form-check-input" type="checkbox" value="directTreasure" name="type_operation_directTreasure">
+                                   <input class="form-check-input" type="checkbox" value="directTreasure" name="typeOperationDirectTreasure">
                                    <label class="form-check-label" for="checkTreasure">
                                      TESOURO DIRETO
                                    </label>
                               </div>
                          <div class="form-group mt-2">
-                              <label for="dateReserve">Data da operação:</label>
-                              <input class="form-control" type="date" name="date-Reserve" required>
-                         </div>
-                         <div class="form-group mt-2">
                               <label for="operationDetailsReserve">Operação de:</label>
                               <div class="form-check">
-                                   <input class="form-check-input" type="checkbox" value="buy" name="type_operation_buyReserve">
+                                   <input class="form-check-input" type="checkbox" value="entry" name="typeOperationEntryReserve">
                                    <label class="form-check-label" for="checkEntry">
                                      ENTRADA
                                    </label>
                               </div>
                               <div class="form-check">
-                                   <input class="form-check-input" type="checkbox" value="sale" name="type_operation_saleReserve">
+                                   <input class="form-check-input" type="checkbox" value="exit" name="typeOperationExitReserve">
                                    <label class="form-check-label" for="checkExit">
                                      RETIRADA
                                    </label>
@@ -62,7 +62,7 @@
                          </div>
                          <div class="form-group mt-2">
                               <label for="valueOperation">Valor:</label>
-                              <input class="form-control" type="number" name="value-operationReserve" step="0.01" min="0.01" placeholder="Exemplo: 1.000,55" required>
+                              <input class="form-control" type="number" name="valueOperationReserve" step="0.01" min="0.01" placeholder="Exemplo: 1.000,55" required>
                          </div>
                               <button class="btn btn-outline-success" type="submit">Salvar Operação</button>
                     </form>
