@@ -19,7 +19,7 @@ router.post('/new', function (req, res) {
                buyOperation:req.body.typeOperationSaleStock,
                quanty:req.body.quantyOperationStock,
                value:req.body.valueOperationStock,
-          })
+          });
 
           stock.save((err)=>{
                if (err) {
@@ -27,9 +27,9 @@ router.post('/new', function (req, res) {
                } else {
                     res.redirect('/');
                }
-          })
+          });
 
-     })
+     });
 
 
 module.exports = router;

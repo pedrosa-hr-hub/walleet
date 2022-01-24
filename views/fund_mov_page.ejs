@@ -10,25 +10,25 @@
                     <h1>Operação com FUNDO DE INVESTIMENTO:</h1>
                </div>
                <div class="card-body">
-                    <form method="post" action="/stock/create">
+                    <form method="post" action="/fund/new">
                          <div class="form-group mt-2">
                               <label for="nameFund">Nome do fundo:</label>
-                              <input class="form-control" type="text" name="name-fund" placeholder="Exemplo: Trend DI Simples FIRF" required>
+                              <input class="form-control" type="text" name="nameFund" placeholder="Exemplo: Trend DI Simples FIRF" required>
                          </div>
                          <div class="form-group mt-2">
                               <label for="dateComppany">Data da operação:</label>
-                              <input class="form-control" type="date" name="date-fund" required>
+                              <input class="form-control" type="date" name="dateOperationFund" required>
                          </div>
                          <div class="form-group mt-2">
                               <label for="operationDetails">Operação de:</label>
                               <div class="form-check">
-                                   <input class="form-check-input" type="checkbox" value="buy" name="type_operation_buyFund">
+                                   <input class="form-check-input" type="checkbox" value="buy" name="OperationApllyFund">
                                    <label class="form-check-label" for="checkEntry">
                                      APLICAÇÃO
                                    </label>
                               </div>
                               <div class="form-check">
-                                   <input class="form-check-input" type="checkbox" value="sale" name="type_operation_saleFund">
+                                   <input class="form-check-input" type="checkbox" value="sale" name="OperationRescueFund">
                                    <label class="form-check-label" for="checkSale">
                                      RESGATE
                                    </label>
@@ -36,7 +36,7 @@
                          </div>
                          <div class="form-group mt-2">
                               <label for="valueOperation">Valor:</label>
-                              <input class="form-control" type="number" name="value-operationFund" step="0.01" min="0.01" placeholder="Exemplo: 1.000,55" required>
+                              <input class="form-control" type="number" name="valueOperationFund" step="0.01" min="0.01" placeholder="Exemplo: 1.000,55" required>
                          </div>
                          <button class="btn btn-outline-success" type="submit">Salvar Operação</button>
                     </form>

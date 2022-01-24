@@ -10,25 +10,25 @@
                     <h1>Operação com CRYPTO MOEDA:</h1>
                </div>
                <div class="card-body">
-                    <form method="get" action="/stock/create">
+                    <form method="post" action="/crypto/new">
                          <div class="form-group mt-2">
                               <label for="nameCrypto">Nome da crypto moeda:</label>
-                              <input class="form-control" type="text" name="name-Crypto" placeholder="Exemplo: Bitcoin, Ethereum" required>
+                              <input class="form-control" type="text" name="nameCrypto" placeholder="Exemplo: Bitcoin, Ethereum" required>
                          </div>
                          <div class="form-group mt-2">
                               <label for="dateCrypto">Data da operação:</label>
-                              <input class="form-control" type="date" name="date-Crypto" required>
+                              <input class="form-control" type="date" name="dateOperationCrypto" required>
                          </div>
                          <div class="form-group mt-2">
                               <label for="operationDetailsCrypto">Operação de:</label>
                               <div class="form-check">
-                                   <input class="form-check-input" type="checkbox" value="buy" name="type_operation_buyCrypto">
+                                   <input class="form-check-input" type="checkbox" value="buy" name="typeOperationBuyCrypto">
                                    <label class="form-check-label" for="checkBuy">
                                      COMPRA
                                    </label>
                               </div>
                               <div class="form-check">
-                                   <input class="form-check-input" type="checkbox" value="sale" name="type_operation_saleCrypto">
+                                   <input class="form-check-input" type="checkbox" value="sale" name="typeOperationSaleCrypto">
                                    <label class="form-check-label" for="checkSale">
                                      VENDA
                                    </label>
@@ -36,11 +36,11 @@
                          </div>
                          <div class="form-group mt-2">
                               <label for="quantyOperationCrypto">Quantidade:</label>
-                              <input class="form-control" type="number" name="quanty-operationCrypto" step="1" min="1" placeholder="Exemplo: 150" required>
+                              <input class="form-control" type="number" name="quantyOperationCrypto" step="1" min="1" placeholder="Exemplo: 150" required>
                          </div>
                          <div class="form-group mt-2">
                               <label for="valueOperationCrypto">Valor:</label>
-                              <input class="form-control" type="number" name="value-operationCrypto" step="0.01" min="0.01" placeholder="Exemplo: 1.000,55" required>
+                              <input class="form-control" type="number" name="valueOperationCrypto" step="0.01" min="0.01" placeholder="Exemplo: 1.000,55" required>
                          </div>
                               <button class="btn btn-outline-success" type="submit">Salvar Operação</button>
                     </form>

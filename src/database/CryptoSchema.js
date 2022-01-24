@@ -1,12 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Stock = new Schema({
-     companyName:{
-          type: String,
-          required: true
-     },
-     companyTiker:{
+const Crypto = new Schema({
+     CryptoName:{
           type: String,
           required: true
      },
@@ -14,16 +10,16 @@ const Stock = new Schema({
           type: Date,
           required: true,
      },
-     saleOperation:{
+     buyOperation:{
           type: String,
           required: false,
           default: null,
      },
-     buyOperation:{
+     saleOperation:{
           type: String,
           required: false,
           default: null
-     },
+     },     
      quanty:{
           type: Number,
           required: true,
@@ -34,4 +30,4 @@ const Stock = new Schema({
      }
 })
 
-module.exports = mongoose.model('Stock', Stock);
+module.exports = mongoose.model('Crypto', Crypto);
